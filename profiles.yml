@@ -1,0 +1,13 @@
+cid_chatlog:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server'
+      server: 'VHLC-GIANGTD13'
+      port: 1433
+      database: cid
+      schema: dbo
+      user: 'cid-local'
+      password: '654321'
+      trust_cert: False
