@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: dimension
+    schema: dim
+    tables:
+      - name: calendar
+      - name: country
+
+  - name: fact
+    schema: fact
+    tables:
+      - name: "daily_cases"
+      - name: "daily_deaths"
+      - name: "daily_vaccinations"
+      - name: "daily_hospital_admissions"
+      - name: "daily_excess_mortality"

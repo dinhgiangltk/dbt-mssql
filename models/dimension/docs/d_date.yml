@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: d_date
+    description: "The view contains all dates that any COVID-19 cases has been confirmed."
+    columns:
+      - name: date
+        description: "The date"
+        tests:
+          - not_null
+          - unique
+      
+      - name: year
+        description: "The year"
+        
+      - name: "month"
+        description: "The month"
+      
+      - name: "day"
+        description: "The day"

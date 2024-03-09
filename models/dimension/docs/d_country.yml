@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: d_country
+    description: "The view contains the list of country affected by COVID-19 pandemic."
+    columns:
+      - name: country
+        description: "The name of the country"
+        tests:
+          - not_null
+          - unique
