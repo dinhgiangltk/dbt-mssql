@@ -1,0 +1,273 @@
+version: 2
+
+models:
+
+  - name: f_daily_covid19
+    description: "The table of daily confirmed cases, tests, deaths, vaccinations, hospital admissions, excess mortality by country."
+
+    columns:
+    - name: date
+      description: "The date"
+      tests:
+        - not_null
+        - relationships:
+            to: ref("d_date")
+            field: date
+        
+    - name: country
+      description: "The country name"
+      tests:
+        - not_null
+        - relationships:
+            to: ref("d_country")
+            field: country
+    
+    - name: new_cases
+      description: "The number of daily confirmed cases"
+      tests:
+        - not_null
+
+    - name: new_cases_per_million
+      description: "The number of daily confirmed cases in million"
+      tests:
+        - not_null
+
+    - name: new_cases_smoothed
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_cases_smoothed_per_million
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_tests
+      description: "The number of daily tests"
+      tests:
+        - not_null
+
+    - name: new_tests_per_thousand
+      description: "The number of daily tests in thousand"
+      tests:
+        - not_null
+
+    - name: new_tests_smoothed
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_tests_smoothed_per_thousand
+      description: ""
+      tests:
+        - not_null
+
+    - name: positive_rate
+      description: "The infection rate"
+      tests:
+        - not_null
+
+    - name: reproduction_rate
+      description: "The reproduction rate"
+      tests:
+        - not_null
+
+    - name: share_cases_sequenced
+      description: ""
+      tests:
+        - not_null
+
+    - name: stringency_index
+      description: ""
+      tests:
+        - not_null
+
+    - name: tests_per_case
+      description: "The average of tests per case"
+      tests:
+        - not_null
+
+    - name: tests_units
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_cases
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_cases_per_million
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_tests
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_tests_per_thousand
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_deaths
+      description: "The number of daily confirmed deaths"
+      tests:
+        - not_null
+
+    - name: new_deaths_per_million
+      description: "The number of daily confirmed deaths in million"
+      tests:
+        - not_null
+    
+    - name: new_deaths_smoothed
+      description: ""
+      tests:
+        - not_null
+    
+    - name: new_deaths_smoothed_per_million
+      description: ""
+      tests:
+        - not_null
+    
+    - name: total_deaths
+      description: ""
+      tests:
+        - not_null
+    
+    - name: total_deaths_last12m
+      description: ""
+      tests:
+        - not_null
+    
+    - name: total_deaths_last12m_per_million
+      description: ""
+      tests:
+        - not_null
+    
+    - name: total_deaths_per_million
+      description: ""
+      tests:
+        - not_null
+
+    - name: cfr
+      description: ""
+      tests:
+        - not_null
+
+    - name: cfr_short_term
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_people_vaccinated_smoothed
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_people_vaccinated_smoothed_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_vaccinations
+      description: "The number of daily vaccinations"
+      tests:
+        - not_null
+
+    - name: new_vaccinations_smoothed
+      description: ""
+      tests:
+        - not_null
+
+    - name: new_vaccinations_smoothed_per_million
+      description: ""
+      tests:
+        - not_null
+
+    - name: people_fully_vaccinated
+      description: "The number of people with fully vaccinations"
+      tests:
+        - not_null
+
+    - name: people_fully_vaccinated_per_hundred
+      description: "The number of people with fully vaccinations in hundred"
+      tests:
+        - not_null
+
+    - name: people_partly_vaccinated
+      description: ""
+      tests:
+        - not_null
+
+    - name: people_partly_vaccinated_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: people_vaccinated
+      description: "The number of people with at least 1 vaccination"
+      tests:
+        - not_null
+
+    - name: people_vaccinated_per_hundred
+      description: "The number of people with at least 1 vaccination in hundred"
+      tests:
+        - not_null
+
+    - name: population
+      description: "The population of the country updated at the date"
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_12m
+      description: ""
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_12m_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_6m
+      description: ""
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_6m_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_9m
+      description: ""
+      tests:
+        - not_null
+
+    - name: rolling_vaccinations_9m_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_boosters
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_boosters_per_hundred
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_vaccinations
+      description: ""
+      tests:
+        - not_null
+
+    - name: total_vaccinations_per_hundred
+      description: ""
+      tests:
+        - not_null
